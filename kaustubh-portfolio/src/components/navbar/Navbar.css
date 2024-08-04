@@ -1,0 +1,134 @@
+/* Navbar.css */
+
+/* Base styles for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Default light background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s; /* Smooth transition for theme changes */
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Default text color */
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: #333; /* Default link color */
+    font-size: 1rem;
+  }
+  
+  .theme-toggle {
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background: #0056b3;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .navbar {
+    background-color: #1e1e1e; /* Dark background for dark mode */
+  }
+  
+  body.dark-mode .navbar-logo a {
+    color: #e0e0e0; /* Light text color for dark mode */
+  }
+  
+  body.dark-mode .navbar-links li a {
+    color: #e0e0e0; /* Light link color for dark mode */
+  }
+  
+  body.dark-mode .theme-toggle {
+    background: #444;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .theme-toggle:hover {
+    background: #666;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar-links {
+      gap: 15px;
+    }
+  
+    .theme-toggle {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .navbar-links {
+      display: none; /* Hide links on small screens */
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Show links when menu is active */
+    }
+  
+    .navbar-links li {
+      margin: 5px 0;
+    }
+  
+    .theme-toggle {
+      margin-top: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-logo a {
+      font-size: 1.2rem;
+    }
+  
+    .theme-toggle {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* Base body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.light-mode .navbar {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-mode .navbar-links li a {
+  color: #333;
+}
+
+body.light-mode .theme-toggle {
+  background: #007bff;
+  color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar-links li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .theme-toggle {
+  background: #444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background: #666;
+}
+
+/* Navbar specific styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+/* Responsive design for Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}

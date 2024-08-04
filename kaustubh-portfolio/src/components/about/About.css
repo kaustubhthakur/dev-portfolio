@@ -1,0 +1,140 @@
+/* About.css */
+
+/* Base styles for About page */
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of viewport */
+    width: 100vw; /* Full width of viewport */
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4; /* Default light background color */
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    background: #ffffff; /* Default light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px; /* Space between photo and text */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for theme changes */
+  }
+  
+  .about-photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: levitate 2s ease-in-out infinite;
+  }
+  
+  .about-text {
+    flex: 2;
+  }
+  
+  .about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .about-content {
+    background: #1e1e1e; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color for dark mode */
+  }
+  
+  body.dark-mode .about-photo {
+    border: 3px solid #ffffff; /* Light border for photo in dark mode */
+  }
+  
+  @keyframes levitate {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 1024px) {
+    .about-content {
+      width: 95%;
+      padding: 15px;
+      gap: 15px; /* Reduce gap on medium screens */
+    }
+  
+    .about-photo {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .about-text h1 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+      padding: 15px;
+      gap: 10px; /* Smaller gap on small screens */
+    }
+  
+    .about-photo {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .about-text h1 {
+      font-size: 1.5rem;
+    }
+  
+    .about-text p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-content {
+      width: 100%;
+      padding: 10px;
+      gap: 5px; /* Minimal gap on very small screens */
+    }
+  
+    .about-photo {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .about-text h1 {
+      font-size: 1.2rem;
+    }
+  
+    .about-text p {
+      font-size: 0.85rem;
+    }
+  }
+  
