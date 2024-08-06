@@ -24,6 +24,20 @@ const HomePage = () => {
          I also love playing chess
         </p>
       </div>
+      <footer className="footer">
+        <h2 className="footer-title">Connect with me</h2>
+        <div className="social-links">
+          <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="GitHub" className="social-icon" />
+          </a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn" className="social-icon" />
+          </a>
+          <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Twitter" className="social-icon" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

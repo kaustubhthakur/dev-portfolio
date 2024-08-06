@@ -1,124 +1,152 @@
 /* Base styles for HomePage */
 .home-page {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  flex-direction: column; /* Change to column for better layout */
+}
+
+/* Profile picture container styles */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+/* Levitating effect animation */
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
   }
-  
-  /* Profile picture container styles */
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile-pic {
+  border: 1.5px black solid;
+  width: 300px; /* Updated size */
+  height: 300px; /* Updated size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  animation: levitate 3s ease-in-out infinite; /* Apply levitating effect */
+  transition: transform 0.3s;
+}
+
+/* Profile picture hover effect */
+.profile-pic:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* About Me section styles */
+.about-section {
+  text-align: center; /* Center text for better layout */
+  max-width: 600px; /* Restrict the width for better readability */
+}
+
+.about-title {
+  font-size: 2.5rem; /* Larger font size */
+  margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+.about-text {
+  font-size: 1.125rem; /* Slightly larger font size for better readability */
+  line-height: 1.6;
+  font-family: cursive;
+  margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+/* Footer styles */
+.footer {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Dark mode styles for HomePage */
+body.dark-mode {
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+body.dark-mode .home-page {
+  background-color: #1e1e1e; /* Dark background for HomePage in dark mode */
+}
+
+body.dark-mode .profile-pic {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .about-title {
+  color: #e0e0e0; /* Light text color for title in dark mode */
+}
+
+body.dark-mode .about-text {
+  color: #e0e0e0; /* Light text color for body text in dark mode */
+}
+
+/* Light blue mode styles for HomePage */
+body.light-blue-mode {
+  background-color: #b2ebf2; /* Light blue background for the whole body */
+  color: #004d40; /* Dark text color for light blue mode */
+}
+
+body.light-blue-mode .home-page {
+  background-color: #e0f7fa; /* Light blue background for HomePage */
+}
+
+body.light-blue-mode .profile-pic {
+  box-shadow: 0 4px 6px rgba(0, 77, 77, 0.2);
+}
+
+body.light-blue-mode .about-title {
+  color: #004d40; /* Dark text color for title in light blue mode */
+}
+
+body.light-blue-mode .about-text {
+  color: #004d40; /* Dark text color for body text in light blue mode */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .profile-pic-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
   }
-  
-  /* Levitating effect animation */
-  @keyframes levitate {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  .profile-pic {
-    border: 1.5px  black solid;
-    width: 300px; /* Updated size */
-    height: 300px; /* Updated size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    animation: levitate 3s ease-in-out infinite; /* Apply levitating effect */
-    transition: transform 0.3s;
-  }
-  
-  /* Profile picture hover effect */
-  .profile-pic:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-  }
-  
-  /* About Me section styles */
+
   .about-section {
-    flex: 2;
-    max-width: 600px; /* Restrict the width for better readability */
+    text-align: center;
   }
-  
-  .about-title {
-    font-size: 2.5rem; /* Larger font size */
-    margin-bottom: 20px; /* Increased margin for spacing */
-  }
-  
-  .about-text {
-    font-size: 1.125rem; /* Slightly larger font size for better readability */
-    line-height: 1.6;
-    font-size: larger;
-    font-family: cursive;
-    margin-bottom: 20px; /* Increased margin for spacing */
-  }
-  
-  /* Dark mode styles for HomePage */
-  body.dark-mode {
-    background-color: #121212; /* Dark background for dark mode */
-    color: #e0e0e0; /* Light text color for dark mode */
-  }
-  
-  body.dark-mode .home-page {
-    background-color: #1e1e1e; /* Dark background for HomePage in dark mode */
-  }
-  
-  body.dark-mode .profile-pic {
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  }
-  
-  body.dark-mode .about-title {
-    color: #e0e0e0; /* Light text color for title in dark mode */
-  }
-  
-  body.dark-mode .about-text {
-    color: #e0e0e0; /* Light text color for body text in dark mode */
-  }
-  
-  /* Light blue mode styles for HomePage */
-  body.light-blue-mode {
-    background-color: #b2ebf2; /* Light blue background for the whole body */
-    color: #004d40; /* Dark text color for light blue mode */
-  }
-  
-  body.light-blue-mode .home-page {
-    background-color: #e0f7fa; /* Light blue background for HomePage */
-  }
-  
-  body.light-blue-mode .profile-pic {
-    box-shadow: 0 4px 6px rgba(0, 77, 77, 0.2);
-  }
-  
-  body.light-blue-mode .about-title {
-    color: #004d40; /* Dark text color for title in light blue mode */
-  }
-  
-  body.light-blue-mode .about-text {
-    color: #004d40; /* Dark text color for body text in light blue mode */
-  }
-  
-  /* Media queries for responsive design */
-  @media (max-width: 768px) {
-    .home-page {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .profile-pic-container {
-      margin-bottom: 20px;
-    }
-  
-    .about-section {
-      text-align: center;
-    }
-  }
-  
+}
