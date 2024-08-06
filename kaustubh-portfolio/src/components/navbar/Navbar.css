@@ -60,6 +60,19 @@ body.dark-mode .theme-toggle {
   background: #444;
   color: #e0e0e0;
 }
+/* resume */
+
+/* Base styles for the button */
+
+
+.download-button
+{
+  width: 75px;
+  height: 30px;
+border: 0;
+border-radius: 10px;
+background-color: orange;
+}
 /* Add border and shadow to the image */
 .navbar-logo .img {
   height: 65px;
