@@ -58,7 +58,7 @@
 .about-text {
   font-size: 1.125rem; /* Slightly larger font size for better readability */
   line-height: 1.6;
-  font-family: cursive;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 20px; /* Increased margin for spacing */
 }
 
