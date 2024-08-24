@@ -5,14 +5,7 @@ import "./Navbar.css"; // Import your CSS file for styling
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
-  const handleDownload = () => {
-    // Replace with your file URL
-    const fileUrl = "https://docs.google.com/document/d/11TKAHT6ra0_HIflMDZ1fP97gLLcYRkZls_P8um4xN2c/edit?usp=sharing";
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = "resume.pdf"; // Optional: Provide a default file name
-    link.click();
-  };
+
   const toggleTheme = () => {
     const newTheme =
       theme === "light" ? "dark" : theme === "dark" ? "light-blue" : "light";
