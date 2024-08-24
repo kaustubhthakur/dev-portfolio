@@ -7,7 +7,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleDownload = () => {
     // Replace with your file URL
-    const fileUrl = "https://example.com/resume.pdf";
+    const fileUrl = "https://docs.google.com/document/d/11TKAHT6ra0_HIflMDZ1fP97gLLcYRkZls_P8um4xN2c/edit?usp=sharing";
     const link = document.createElement("a");
     link.href = fileUrl;
     link.download = "resume.pdf"; // Optional: Provide a default file name
@@ -51,12 +51,7 @@ const Navbar = () => {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li>
-       
-          <button className="download-button" onClick={handleDownload}>
-            Resume
-          </button>
-        </li>
+      
       </ul>
 
       <button onClick={toggleTheme} className="theme-toggle">
